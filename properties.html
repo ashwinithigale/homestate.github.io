@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -70,7 +71,48 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+	.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
 
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+</style>
 	</head>
 	<body>
 		<div id="fh5co-wrapper">
@@ -80,23 +122,19 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-home"></i>Home<span>state</span></a></h1>
+					
+					<a href="index.html"><img src="img/sss_logo.png" alt="error" width="250px"></a>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">
-								<a href="properties.html" class="fh5co-sub-ddown">Properties</a>
-								<ul class="fh5co-sub-menu">
-									<li><a href="#">Family</a></li>
-									<li><a href="#">CSS3 &amp; HTML5</a></li>
-									<li><a href="#">Angular JS</a></li>
-									<li><a href="#">Node JS</a></li>
-									<li><a href="#">Django &amp; Python</a></li>
-								</ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li>
+								<a href="properties.html" class="fh5co-sub-ddown">About Us</a>
+								
 							</li>
 							<li><a href="agent.html">Agent</a></li>
 							<li><a href="blog.html">Blog</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
@@ -109,14 +147,14 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/img_bg_3.jpg);">
+			   	<li style="background-image: url(img/about.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
 				   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 			   				<div class="slider-text-inner">
-			   						<h2 class="heading-title">Our Properties</h2>
-			   						<p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+			   						<h2 class="heading-title"><strong>About Us</strong></h2>
+			   						
 			   				</div>
 			   			</div>
 				   		</div>
@@ -126,326 +164,127 @@
 		  	</div>
 		</aside>
 
-		<div id="fh5co-search-map">
-			<div class="search-property">
-				<div class="s-holder">
-					<h2>Search Properties</h2>
-					<div class="row">
-						<div class="col-xxs-12 col-xs-12">
-							<div class="input-field">
-								<label for="from">Keyword:</label>
-								<input type="text" class="form-control" id="from-place" placeholder="Any"/>
-							</div>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Property Status:</label>
-								<select class="cs-select cs-skin-border">
-									<option value="" disabled selected>Any</option>
-									<option value="1">Rent</option>
-									<option value="2">Sale</option>
-								</select>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Property Type:</label>
-								<select class="cs-select cs-skin-border input-half">
-									<option value="" disabled selected>Any</option>
-									<option value="1">Building</option>
-									<option value="2">Office</option>
-								</select>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<div class="input-field">
-								<label for="from">Location:</label>
-								<input type="text" class="form-control" id="from-place" placeholder="Any"/>
-							</div>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Price:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Bedrooms:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Bathrooms:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Area:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Parking spots:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12 text-center">
-							<p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="map" style="background-image: url(images/cover_bg_1.jpg);">
-			</div>
-		</div>
-
+		
 		<div id="fh5co-properties" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-						<h3>Newest Properties</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-1.jpg);">
-								<span class="status">Sale</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Properties Near in Beach</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-2.jpg);">
-								<span class="status">Rent</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Modern House at NZ</h3>
-								<span class="price">$200/mos</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-3.jpg);">
-								<span class="status">Sale</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Bonggalo House</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>						
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-4.jpg);">
-								<span class="status">Sale</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Properties at Alaska</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-5.jpg);">
-								<span class="status">Rent</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>Modern Properties</h3>
-								<span class="price">$200/mos</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="property">
-							<a href="#" class="fh5co-property" style="background-image: url(images/property-6.jpg);">
-								<span class="status">Sale</span>
-								<ul class="list-details">
-									<li>2000 ft sq<li>
-									<li>5 Bedroom:</li>
-									<li>4 Bathroom:</li>
-									<li>3 Garage:</li>
-								</ul>
-							</a>
-							<div class="property-details">
-								<h3>House at the Top of Mountain</h3>
-								<span class="price">$3,000</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-								<span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					<div class="text-center heading-section animate-box">
+						<h3>About Us</h3>
+						<p style="text-align: justify;">Radiance Infraventure - Redefining the virtues of transparency and efficiency Today, Radiance Infraventure is a household name across the region. We build more than homes. We build values and relationships. We take pride in establishing close relationships with our customers and in working closely with you to achieve the best possible results. We are committed to providing quality workmanship and materials that is environmentally responsible. Combine years of experience with hundreds of successful client relationships and remarkable financial stability, our project will be masterpiece. We look forward that Radiance project will be a standing testimony to our basic approach of upholding excellent standards in design and construction. And also characteristic hallmarks- technical excellence, impeccable quality, spacious accommodation & completion on schedule. Radiance Sai Krishna Residency is an ambitious construction venture from the company with different lifestyle residential options to cater to different needs and budget. With this enterprising project, the company wishes to widen its work area and institute a line up of elite customers and track record of prestigious ventures in the market.</p>
+						<h3>Legance redefined</h3>
 
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row row-bottom-padded-md">
-						<div class="col-md-3">
-							<h3 class="section-title">About Homestate</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-						</div>
+						<p style="text-align: justify;">Radiance Sai Krishna Residency is an elegant residential tower, smartly planned with world- class design. This project of future will accommodate a range of lifestyle apartments set in the midst of lively neighborhood. With comfortable neighborhoods and easily accessible community spaces, you can work, dine, shop and enjoy life in a natural, healthy environment. Sai Krishna Residency is a community that elegantly blends contemporary culture and nature.</p>
 						
-						<div class="col-md-3 col-md-push-1">
-							<h3 class="section-title">Links</h3>
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Properties</a></li>
-								<li><a href="#">Agent</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">API</a></li>
-								<li><a href="#">FAQ / Contact</a></li>
-							</ul>
-						</div>
+						
+						<h3>More of Radiance Sai Krishna Residency...</h3>
+						
+						<p style="text-align: justify;">This remarkable complex is coming up in a new corporate developing area of the city and will offer a unique mix of homes. It's a new-generation "live-work-play" development inspired by the best tradition in city planning from across India. Wide, tree-lined boundaries, and a carefully planned network of apartments and open spaces will give you the joy of living close to nature and will fill your homes with refreshing air and bright sunlight everyday.</p>
+						<div class="row">
+							<div class="col-md-6"><img src="img/map1.jpg" alt="error" style="width: 90%;"></div>
+							<div class="col-md-6"><img src="img/map2.jpg" alt="error" style="width: 90%;height:350px;"></div>
 
-						<div class="col-md-3">
-							<h3 class="section-title">Information</h3>
-							<ul>
-								<li><a href="#">Terms &amp; Condition</a></li>
-								<li><a href="#">License</a></li>
-								<li><a href="#">Privacy &amp; Policy</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<h3 class="section-title">Newsletter</h3>
-							<p>Subscribe for our newsletter</p>
-							<form class="form-inline" id="fh5co-header-subscribe">
-								<div class="row">
-									<div class="col-md-12 col-md-offset-0">
-										<div class="form-group">
-											<input type="text" class="form-control" id="email" placeholder="Enter your email">
-											<button type="submit" class="btn btn-default"><i class="icon-paper-plane"></i></button>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
-							<p>Copyright 2016 Free Html5 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a> &amp; <a href="http://blog.gessato.com/" target="_blank">Gessato</a></p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
+				
+					</div>
+				</div>
+				<br><br>
+				<div class="container" style="text-align: center;">
+		<div class="row" style="background-color: white;">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+              <h1><strong>Don't forget to Sign up</strong></h1>
+			<form class="form-inline" action="/action_page.php">
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Enter Your email" name="email" style="width: 400px;">
+				<button type="submit" style="width: 200px;">Subscribe</button>
+			  </form>
+			  </div>
+			  <div class="col-md-2"></div>
+		</div>
+		</div>
+		<br><br>
+		<div class="container">
+		<h1 style="text-align: center;"><strong>A RESOLUTE LEADER WITH A VISION FOR FUTURE!</strong></h1>
+		<center><img src="img/ceo.jpeg" alt="error" style="width:300px;height:300px;border-radius: 50%;"></center>
+		<br>
 
+		<p style="text-align: justify;">Meet Mr. T. Mohan Reddy. A man of substance and innovative ideas for a propitious future. Since his young age he was passionate about dreaming big and working really very hard to accomplish them. He founded TMR Group way back in 2003 with a vision of building fulfilling & contemporary lifestyles for ambitious people. The magnitude of his ideas was so big that he never settled at short-term goals. Taking up barren land parcels and converting them to colonies of happy living became his business.</p>
+		<p style="text-align: justify;">And sincerely treading a path of excellence, he had delivered value homes and promising plots to thousands of satisfied customers as of today! But his desire is insatiable and his quest for perfection is also never-ending. With a wide network of path-breaking projects, a proficient team of domain experts and concrete plans to uplift the face of Hyderabad...he is determined to stay at the top slot of the real estate sector. With head proudly held high and feet firmly rooted in the soil of Telangana, he is leading from the front…</p>
+		</div>
+		<br><br>
+		<footer>
+            <div id="footer">
+              <div class="container">
+                <div class="row row-bottom-padded-md">
+                  <div class="col-md-3">
+                    <br>
+                    <img src="img/sss_logo.png" style="
+                    width: 200px;
+                    height: 100px;">
+                    
+                    <p>we are the best real state company in hyderabad.we will provide best ventures.</p>
+                    <p class="fh5co-social-icons">
+                      <a href="#"><i class="icon-twitter2"></i></a>
+                      <a href="#"><i class="icon-facebook2"></i></a>
+                      <a href="#"><i class="icon-instagram"></i></a>
+                      <a href="#"><i class="icon-linkedin2"></i></a>
+                    </p>
+                  </div>
+                  
+                  <div class="col-md-3 col-md-push-1">
+                    <br>
+                    <h3 class="section-title">Projects</h3>
+                    <ul>
+                      <li><a href="#">Sai Brindavanam</a></li>
+                      <li><a href="#">Sai Krishna</a></li>
+                      <li><a href="#">Sai Homes</a></li>
+                      <li><a href="#">Sai ventures</a></li>
+                      
+                    </ul>
+                  </div>
+        
+                  <div class="col-md-3">  <br>
+                    <h3 class="section-title">Information</h3>
+                    <ul>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Terms &amp; Condition</a></li>
+                      <li><a href="#">License</a></li>
+                      
+                      
+                    </ul>
+                  </div>
+                  <div class="col-md-3">  <br>
+                    <h3 class="section-title">Newsletter</h3>
+                    <p>Subscribe for our newsletter</p>
+                    <form class="form-inline" id="fh5co-header-subscribe">
+                      <div class="row">
+                        <div class="col-md-12 col-md-offset-0">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                            <button type="submit" class="btn btn-default"><i class="icon-paper-plane"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+        
+                <hr class="hr-line">
+        
+                
+                  
+                  <div class="text-center">
+                    
+                    <p>© 2022 Copyright. All Rights Reserved. Made with <i class="icon-heart3"></i> by <a href="https://www.imagispark.com/" target="_blank">Imagispark</a> </p>
+                  </div>
+                
+              </div>
+            </div>
+          </footer>
+        
 	
 
 	</div>
